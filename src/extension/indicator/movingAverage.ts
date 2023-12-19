@@ -29,14 +29,14 @@ const movingAverage: IndicatorTemplate<Ma> = {
   name: 'MA',
   shortName: 'MA',
   series: IndicatorSeries.Price,
-  calcParams: [5, 10, 30, 60],
+  calcParams: [7, 14, 21, 28],
   precision: 2,
   shouldOhlc: true,
   figures: [
-    { key: 'ma5', title: 'MA5: ', type: 'line' },
-    { key: 'ma10', title: 'MA10: ', type: 'line' },
-    { key: 'ma30', title: 'MA30: ', type: 'line' },
-    { key: 'ma60', title: 'MA60: ', type: 'line' }
+    { key: 'ma7', title: 'MA7: ', type: 'line' },
+    { key: 'ma14', title: 'MA14: ', type: 'line' },
+    { key: 'ma21', title: 'MA21: ', type: 'line' },
+    { key: 'ma28', title: 'MA28: ', type: 'line' }
   ],
   regenerateFigures: (params: any[]) => {
     return params.map((p: number, i: number) => {
